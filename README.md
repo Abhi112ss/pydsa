@@ -1,106 +1,432 @@
-# PyDSA Engine 🚀
+# 🚀 PyDSA Engine
 
-![PyPI - Version](https://img.shields.io/pypi/v/pydsa-engine)
-![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
-![Build](https://img.shields.io/badge/build-passing-brightgreen)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+<p align="center">
+  <img src="https://img.shields.io/pypi/v/pydsa-engine" alt="PyPI Version">
+  <img src="https://img.shields.io/badge/python-3.11+-blue.svg" alt="Python">
+  <img src="https://img.shields.io/badge/build-passing-brightgreen" alt="Build">
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
+</p>
 
-**PyDSA Engine** is a semantic, AI-powered Data Structures and Algorithms execution environment. 
-
-It features a massive database of over 3,900 algorithms, a local AI vector search for fuzzy routing, a real-time execution engine, an X-Ray visual tracer for debugging, and a built-in FastAPI REST server.
-
-## ✨ Features
-
-* **🧠 AI Vector Routing:** Find the right algorithm even if you don't know the exact name (e.g., search for "water container" to find "Container With Most Water").
-* **⚡ Dynamic Execution:** Pass actual inputs directly from your terminal and watch the engine calculate the optimal output, time complexity, and space complexity.
-* **🔍 Visual Tracer (X-Ray):** Watch the Python interpreter step through the algorithm line-by-line and track local variables in real-time.
-* **🌐 Built-in REST API:** Instantly transform the CLI tool into a FastAPI backend microservice with a single command.
-* **📋 Clipboard Integration:** Instantly copy optimal, syntax-highlighted solutions directly to your system clipboard.
+<p align="center">
+  <b>A Semantic AI-Powered Data Structures & Algorithms Execution Engine</b>
+</p>
 
 ---
 
-## 📦 Installation
+## 🌟 Overview
 
-Install globally via the Python Package Index (PyPI):
+**PyDSA Engine** is a next-generation Data Structures and Algorithms execution environment designed for developers, students, educators, and AI applications.
 
+Instead of remembering exact problem names, simply describe what you're looking for and let the AI-powered routing engine find the correct algorithm instantly.
+
+PyDSA Engine includes:
+
+* 🧠 AI Semantic Search
+* ⚡ Dynamic Algorithm Execution
+* 🔍 Visual X-Ray Tracer
+* 📋 Clipboard Integration
+* 🌐 Built-in FastAPI Server
+* 📚 3900+ Algorithm Database
+* 📈 Complexity Analysis
+* 🎯 Natural Language Problem Routing
+
+---
+
+# ✨ Features
+
+## 🧠 AI Vector Routing
+
+Find algorithms using natural language.
+
+Example:
+
+> "water container"
+
+Automatically routes to:
+
+> Container With Most Water
+
+---
+
+## ⚡ Dynamic Execution
+
+Execute algorithms directly from the terminal with real inputs.
+
+Supports:
+
+* Arrays
+* Strings
+* Integers
+* Matrices
+* Graph Inputs
+* Trees
+
+---
+
+## 🔍 X-Ray Visual Tracer
+
+Watch your algorithm execute step-by-step.
+
+Features:
+
+* Local variable tracking
+* Execution flow visualization
+* Debugging support
+* Educational learning mode
+
+---
+
+## 🌐 Built-in REST API
+
+Turn PyDSA into a backend microservice instantly.
+
+Powered by:
+
+* FastAPI
+* Swagger UI
+* OpenAPI
+
+---
+
+## 📋 Clipboard Integration
+
+Copy optimal solutions directly into your IDE.
+
+---
+
+# 📦 Installation
+
+Install globally from PyPI:
+
+```bash
 pip install pydsa-engine
+```
+
+Verify installation:
+
+```bash
+pydsa --help
+```
 
 ---
 
-## 💻 CLI Usage
+# 💻 CLI Usage
 
-### 1. Search for a Problem
-Don't know the exact name? Ask the AI Brain to find it for you using natural language:
+## 1️⃣ Search For A Problem
 
+Use natural language to find algorithms.
+
+```bash
 pydsa search "water container"
+```
 
+Example Output:
 
-### 2. View and Copy Source Code
-Bypass execution to instantly view the syntax-highlighted optimal code in your terminal, or copy it directly to your clipboard:
-
-# View the code in the terminal
-pydsa solve "max water" --show-code
-
-# Copy the code directly to your IDE (requires pyperclip)
-pydsa solve "two sum" --copy
-
-
-### 3. Execute an Algorithm
-Pass your inputs directly via the CLI. The engine will safely parse arrays, strings, and integers, run the optimal algorithm, and display the complexities.
-*(Note: Array inputs must be wrapped in quotes)*
-
-pydsa solve "two sum" "[2, 7, 11, 15]" "9"
-
-
-### 4. The Visual Tracer (Step-by-Step)
-Append the `--trace` flag to watch the algorithm execute line-by-line and print a table of the local variable states:
-
-pydsa solve "two sum" "[2, 7, 11, 15]" "9" --trace
-
+```text
+Found:
+Container With Most Water
+Difficulty: Medium
+Category: Two Pointers
+```
 
 ---
 
-## 🌐 API Server Usage
+## 2️⃣ View Source Code
 
-PyDSA Engine includes a production-ready FastAPI server. You can spin it up locally to serve algorithm executions to your web or mobile apps.
+Display the optimal implementation.
 
-Start the server:
+```bash
+pydsa solve "max water" --show-code
+```
 
+---
+
+## 3️⃣ Copy Source Code
+
+Copy the implementation directly to your clipboard.
+
+```bash
+pydsa solve "two sum" --copy
+```
+
+Requirements:
+
+```bash
+pip install pyperclip
+```
+
+---
+
+## 4️⃣ Execute An Algorithm
+
+Pass actual inputs directly.
+
+Example:
+
+```bash
+pydsa solve "two sum" "[2,7,11,15]" "9"
+```
+
+Output:
+
+```text
+Result:
+[0,1]
+
+Time Complexity:
+O(n)
+
+Space Complexity:
+O(n)
+```
+
+---
+
+## 5️⃣ Visual X-Ray Tracing
+
+Watch execution step-by-step.
+
+```bash
+pydsa solve "two sum" "[2,7,11,15]" "9" --trace
+```
+
+Example Output:
+
+```text
+Line 12:
+num = 2
+target = 9
+
+Line 13:
+lookup = {2:0}
+```
+
+Perfect for:
+
+* Learning DSA
+* Debugging
+* Interview Preparation
+
+---
+
+# 🌐 REST API Server
+
+PyDSA includes a production-ready FastAPI backend.
+
+Start server:
+
+```bash
 pydsa serve --port 8000
+```
 
+Server:
 
-Once running, navigate to `http://127.0.0.1:8000/docs` in your browser to access the interactive Swagger UI and test the endpoints.
+```text
+http://127.0.0.1:8000
+```
 
-**Example API Request (`POST /solve`):**
+Swagger Docs:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+Redoc:
+
+```text
+http://127.0.0.1:8000/redoc
+```
+
+---
+
+## Example API Request
+
+### Endpoint
+
+```http
+POST /solve
+```
+
+### Request Body
+
+```json
 {
   "query": "two sum",
   "inputs": [
-    [2, 7, 11, 15],
+    [2,7,11,15],
     9
   ],
   "trace": true
 }
+```
+
+### Response
+
+```json
+{
+  "result": [0,1],
+  "time_complexity": "O(n)",
+  "space_complexity": "O(n)"
+}
+```
 
 ---
 
-## 🛠️ Development & Testing
+# 📚 Supported Categories
 
-Want to contribute to the engine or add new algorithms? 
+PyDSA Engine currently supports:
 
-1. Clone the repository:
+* Arrays
+* Strings
+* Linked Lists
+* Trees
+* Binary Trees
+* Binary Search Trees
+* Graphs
+* Dynamic Programming
+* Greedy Algorithms
+* Backtracking
+* Recursion
+* Sliding Window
+* Two Pointers
+* Hash Tables
+* Heaps
+* Queues
+* Stacks
+* Tries
+* Design Problems
+* Math
+* Bit Manipulation
 
+And many more.
+
+---
+
+# 🏗 Project Architecture
+
+```text
+PyDSA Engine
+│
+├── CLI
+├── AI Semantic Search
+├── Vector Database
+├── Execution Engine
+├── Visual Tracer
+├── FastAPI Server
+├── Complexity Analyzer
+└── Algorithm Database (3900+)
+```
+
+---
+
+# 🛠 Development Setup
+
+Clone repository:
+
+```bash
 git clone https://github.com/YOUR_USERNAME/pydsa.git
+```
+
+Move into project:
+
+```bash
 cd pydsa
+```
 
-2. Install in editable mode with testing dependencies:
+Install editable mode:
 
+```bash
 pip install -e .
+```
+
+Install testing dependencies:
+
+```bash
 pip install pytest
+```
 
-3. Run the test suite to ensure the AI routing and engine are stable:
+---
 
+# ✅ Run Tests
+
+Execute the full test suite:
+
+```bash
 pytest
+```
 
+Run with coverage:
 
-## 📄 License
-This project is licensed under the MIT License.
+```bash
+pytest --cov=pydsa
+```
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+You can contribute:
+
+* New algorithms
+* Bug fixes
+* Documentation
+* New CLI features
+* Performance improvements
+* AI routing enhancements
+
+Workflow:
+
+```bash
+fork → feature branch → commit → pull request
+```
+
+---
+
+# 📈 Roadmap
+
+### v1
+
+* AI Semantic Search
+* Execution Engine
+* FastAPI Server
+* X-Ray Tracer
+
+### v2
+
+* Visual Graph Explorer
+* Interactive Tree Renderer
+* Algorithm Benchmarking
+* Web Playground
+
+### v3
+
+* AI Tutor Mode
+* LeetCode Importer
+* Competitive Programming Assistant
+* Algorithm Recommendation Engine
+
+---
+
+# 📄 License
+
+Licensed under the MIT License.
+
+See:
+
+```text
+LICENSE
+```
+
+for details.
+
+---
+
+<p align="center">
+  Built with ❤️ for the Python & DSA Community
+</p>
+
+<p align="center">
+  <b>PyDSA Engine — Search. Execute. Learn.</b>
+</p>
