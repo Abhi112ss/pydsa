@@ -1,0 +1,1 @@
+"""pydsa.core — registry, router, engine, models, exceptions."""

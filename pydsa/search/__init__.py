@@ -1,0 +1,1 @@
+"""pydsa.search — pluggable search backends (fuzzy, embeddings, AI)."""
